@@ -1,0 +1,28 @@
+architecture: standalone
+
+auth:
+  enabled: false
+
+master:
+  persistence:
+    enabled: false
+  podLabels:
+    policy.semaphore.uw.io/name: redis-master
+  resources:
+    requests:
+      cpu: 50m
+      memory: 50Mi
+  disableCommands: []
+
+volumePermissions:
+  enabled: false
+
+metrics:
+  enabled: true
+  resources:
+    requests:
+      cpu: 50m
+      memory: 50Mi
+
+commonConfiguration: ''
+
